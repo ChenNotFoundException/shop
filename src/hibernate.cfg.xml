@@ -4,8 +4,22 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url"/>
-        <property name="connection.driver_class"/>
+        <property name="connection.url">jdbc:mysql://localhost:3306/db_shop</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="com.shop.model.user.Customer"/>
+        <mapping resource="com/shop/model/user/Customer.hbm.xml"/>
+        <mapping resource="com/shop/model/user/User.hbm.xml"/>
+        <mapping class="com.shop.model.user.User"/>
+        <mapping resource="com/shop/model/order/Order.hbm.xml"/>
+        <mapping class="com.shop.model.order.Order"/>
+        <mapping resource="com/shop/model/order/Orderitem.hbm.xml"/>
+        <mapping class="com.shop.model.order.Orderitem"/>
+        <mapping resource="com/shop/model/product/Productcategory.hbm.xml"/>
+        <mapping class="com.shop.model.product.Productcategory"/>
+        <mapping resource="com/shop/model/product/Productinfo.hbm.xml"/>
+        <mapping class="com.shop.model.product.Productinfo"/>
+        <mapping resource="com/shop/model/product/Uploadfile.hbm.xml"/>
+        <mapping class="com.shop.model.product.Uploadfile"/>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 

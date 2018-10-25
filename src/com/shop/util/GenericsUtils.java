@@ -1,4 +1,4 @@
-package com.shop.util.hibernateUtils;
+package com.shop.util;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

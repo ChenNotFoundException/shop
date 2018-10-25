@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.shop.model.order.Order" table="tb_order" schema="db_shop">
+        <id name="orderId" column="orderId"/>
+        <property name="name" column="name"/>
+        <property name="address" column="address"/>
+        <property name="mobile" column="mobile"/>
+        <property name="totalPrice" column="totalPrice"/>
+        <property name="createTime" column="createTime"/>
+        <property name="paymentWay" column="paymentWay"/>
+        <property name="orderState" column="orderState"/>
+
+        <many-to-one name="customer" class="com.shop.model.user.Customer">
+            <column name="customerId"/>
+        </many-to-one>
+        <set name="orderItems" inverse="true" lazy="extra" cascade="all">
+            <key column="orderId"></key>
+            <one-to-many class="com.shop.model.order.Orderitem"/>
+        </set>
+    </class>
+</hibernate-mapping>

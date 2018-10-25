@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.shop.model.product.Productinfo" table="tb_productinfo" schema="db_shop">
+        <id name="id" column="id"/>
+        <property name="name" column="name"/>
+        <property name="description" column="description"/>
+        <property name="createTime" column="createTime"/>
+        <property name="baseprice" column="baseprice"/>
+        <property name="marketprice" column="marketprice"/>
+        <property name="sellprice" column="sellprice"/>
+        <property name="sexrequest" column="sexrequest"/>
+        <property name="commend" column="commend"/>
+        <property name="clickcount" column="clickcount"/>
+        <property name="sellCount" column="sellCount"/>
+    </class>
+</hibernate-mapping>
